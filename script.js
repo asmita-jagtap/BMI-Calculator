@@ -20,7 +20,7 @@ document.getElementById('bmiForm').addEventListener('submit', function(e) {
       result.textContent = `${name}, your BMI is ${bmi} (${status})`;
   
       // Send to PHP
-      fetch('save_bmi.php', {
+      fetch('savebmi.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `name=${name}&height=${height}&weight=${weight}&bmi=${bmi}&status=${status}`
